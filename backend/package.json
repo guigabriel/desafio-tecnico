@@ -1,20 +1,26 @@
 {
-  "name": "backend",
+  "name": "backend-node-ts",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "Backend em Node.js com TypeScript",
+  "main": "dist/application/server.js",    
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "devDependencies": {
-    "@types/express": "^5.0.0",
-    "@types/node": "^22.9.1",
-    "typescript": "^5.6.3"
+    "start": "ts-node src/application/server.ts",      
+    "build": "tsc",                              
+    "start:prod": "node dist/application/server.js", 
+    "dev": "nodemon src/application/server.ts"    
   },
   "dependencies": {
-    "express": "^4.21.1"
-  }
+    "express": "^4.18.2",                     
+    "axios": "^1.4.0",
+    "mysql2": "^3.2.3"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2",                   
+    "ts-node": "^10.9.1",                         
+    "@types/node": "^20.6.0",                 
+    "@types/express": "^4.17.17",             
+    "nodemon": "^3.0.0"                         
+  },
+  "license": "MIT"
 }
+
